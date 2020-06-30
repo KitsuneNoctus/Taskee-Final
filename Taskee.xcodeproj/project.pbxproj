@@ -16,6 +16,10 @@
 		3F38D57524AAB4B200D1CCBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F38D57324AAB4B200D1CCBD /* LaunchScreen.storyboard */; };
 		3F38D58024AAB4B200D1CCBD /* TaskeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D57F24AAB4B200D1CCBD /* TaskeeTests.swift */; };
 		3F38D58B24AAB4B200D1CCBD /* TaskeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D58A24AAB4B200D1CCBD /* TaskeeUITests.swift */; };
+		3F38D59D24AABA8F00D1CCBD /* NewProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D59C24AABA8F00D1CCBD /* NewProjectViewController.swift */; };
+		3F38D59F24AABAA800D1CCBD /* ProjectHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D59E24AABAA800D1CCBD /* ProjectHomeViewController.swift */; };
+		3F38D5A124AABACE00D1CCBD /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D5A024AABACE00D1CCBD /* TaskViewController.swift */; };
+		3F38D5A324AABAE200D1CCBD /* NewEditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D5A224AABAE200D1CCBD /* NewEditTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,7 @@
 		3F38D56224AAB4AE00D1CCBD /* Taskee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taskee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F38D56524AAB4AE00D1CCBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F38D56724AAB4AE00D1CCBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3F38D56924AAB4AE00D1CCBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F38D56924AAB4AE00D1CCBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		3F38D56C24AAB4AE00D1CCBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F38D56F24AAB4AE00D1CCBD /* Taskee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Taskee.xcdatamodel; sourceTree = "<group>"; };
 		3F38D57124AAB4B200D1CCBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +55,10 @@
 		3F38D58624AAB4B200D1CCBD /* TaskeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F38D58A24AAB4B200D1CCBD /* TaskeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskeeUITests.swift; sourceTree = "<group>"; };
 		3F38D58C24AAB4B200D1CCBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F38D59C24AABA8F00D1CCBD /* NewProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProjectViewController.swift; sourceTree = "<group>"; };
+		3F38D59E24AABAA800D1CCBD /* ProjectHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHomeViewController.swift; sourceTree = "<group>"; };
+		3F38D5A024AABACE00D1CCBD /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		3F38D5A224AABAE200D1CCBD /* NewEditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +109,14 @@
 		3F38D56424AAB4AE00D1CCBD /* Taskee */ = {
 			isa = PBXGroup;
 			children = (
+				3F38D59924AABA3200D1CCBD /* Controllers */,
+				3F38D59824AABA2A00D1CCBD /* Model */,
 				3F38D56524AAB4AE00D1CCBD /* AppDelegate.swift */,
 				3F38D56724AAB4AE00D1CCBD /* SceneDelegate.swift */,
-				3F38D56924AAB4AE00D1CCBD /* ViewController.swift */,
 				3F38D56B24AAB4AE00D1CCBD /* Main.storyboard */,
 				3F38D57124AAB4B200D1CCBD /* Assets.xcassets */,
 				3F38D57324AAB4B200D1CCBD /* LaunchScreen.storyboard */,
 				3F38D57624AAB4B200D1CCBD /* Info.plist */,
-				3F38D56E24AAB4AE00D1CCBD /* Taskee.xcdatamodeld */,
 			);
 			path = Taskee;
 			sourceTree = "<group>";
@@ -129,6 +137,42 @@
 				3F38D58C24AAB4B200D1CCBD /* Info.plist */,
 			);
 			path = TaskeeUITests;
+			sourceTree = "<group>";
+		};
+		3F38D59824AABA2A00D1CCBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F38D56E24AAB4AE00D1CCBD /* Taskee.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F38D59924AABA3200D1CCBD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3F38D59B24AABA7000D1CCBD /* Task */,
+				3F38D59A24AABA6B00D1CCBD /* Project */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3F38D59A24AABA6B00D1CCBD /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				3F38D56924AAB4AE00D1CCBD /* ViewController.swift */,
+				3F38D59C24AABA8F00D1CCBD /* NewProjectViewController.swift */,
+				3F38D59E24AABAA800D1CCBD /* ProjectHomeViewController.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		3F38D59B24AABA7000D1CCBD /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				3F38D5A024AABACE00D1CCBD /* TaskViewController.swift */,
+				3F38D5A224AABAE200D1CCBD /* NewEditTaskViewController.swift */,
+			);
+			path = Task;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +307,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F38D57024AAB4AE00D1CCBD /* Taskee.xcdatamodeld in Sources */,
+				3F38D5A124AABACE00D1CCBD /* TaskViewController.swift in Sources */,
 				3F38D56A24AAB4AE00D1CCBD /* ViewController.swift in Sources */,
 				3F38D56624AAB4AE00D1CCBD /* AppDelegate.swift in Sources */,
+				3F38D5A324AABAE200D1CCBD /* NewEditTaskViewController.swift in Sources */,
+				3F38D59F24AABAA800D1CCBD /* ProjectHomeViewController.swift in Sources */,
 				3F38D56824AAB4AE00D1CCBD /* SceneDelegate.swift in Sources */,
+				3F38D59D24AABA8F00D1CCBD /* NewProjectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
