@@ -9,22 +9,38 @@
 import UIKit
 
 class ProjectHomeViewController: UIViewController {
+    
+    let tableView: UITableView = {
+        let table = UITableView()
+        table.translatesAutoresizingMaskIntoConstraints = false
+        table.backgroundColor = .clear
+//        table.
+        return table
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.title = "Projects"
+        self.view.backgroundColor = .white
+        setButton()
+        setTable()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setTable(){
+        
     }
-    */
+    
+    //MARK: Button
+    func setButton(){
+        let newButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createProject))
+        self.navigationItem.rightBarButtonItem = newButton
+    }
+    
+    @objc func createProject(){
+        print("Adding project")
+//        let addVC = AddingItemViewController()
+//        self.navigationController?.pushViewController(addVC, animated: true)
+    }
+    
 
 }
