@@ -38,8 +38,8 @@ class ProjectHomeViewController: UIViewController {
     
     @objc func createProject(){
         print("Adding project")
-//        let addVC = AddingItemViewController()
-//        self.navigationController?.pushViewController(addVC, animated: true)
+        let addVC = NewProjectViewController()
+        self.navigationController?.pushViewController(addVC, animated: true)
     }
     
 
