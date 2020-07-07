@@ -18,6 +18,8 @@
 		3F38D59F24AABAA800D1CCBD /* ProjectHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D59E24AABAA800D1CCBD /* ProjectHomeViewController.swift */; };
 		3F38D5A124AABACE00D1CCBD /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D5A024AABACE00D1CCBD /* TaskViewController.swift */; };
 		3F38D5A324AABAE200D1CCBD /* NewEditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D5A224AABAE200D1CCBD /* NewEditTaskViewController.swift */; };
+		3FD7215624B3F82B00F2B65D /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7215424B3F82B00F2B65D /* TaskCell.swift */; };
+		3FD7215724B3F82B00F2B65D /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD7215524B3F82B00F2B65D /* TaskCell.xib */; };
 		3FE4301224ADA3C600ACDDE0 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4301124ADA3C600ACDDE0 /* Tasks.swift */; };
 		3FE4301424ADA4F300ACDDE0 /* ColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4301324ADA4F300ACDDE0 /* ColorButton.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		3F38D59E24AABAA800D1CCBD /* ProjectHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHomeViewController.swift; sourceTree = "<group>"; };
 		3F38D5A024AABACE00D1CCBD /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		3F38D5A224AABAE200D1CCBD /* NewEditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditTaskViewController.swift; sourceTree = "<group>"; };
+		3FD7215424B3F82B00F2B65D /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		3FD7215524B3F82B00F2B65D /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
 		3FE4301124ADA3C600ACDDE0 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		3FE4301324ADA4F300ACDDE0 /* ColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +162,7 @@
 		3F38D59A24AABA6B00D1CCBD /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				3FD7215124B3F57A00F2B65D /* Cells */,
 				3FE4300F24ADA31600ACDDE0 /* Custom Button */,
 				3F38D59C24AABA8F00D1CCBD /* NewProjectViewController.swift */,
 				3F38D59E24AABAA800D1CCBD /* ProjectHomeViewController.swift */,
@@ -168,11 +173,28 @@
 		3F38D59B24AABA7000D1CCBD /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				3FD7215324B3F59E00F2B65D /* Cells */,
 				3FE4301024ADA3AF00ACDDE0 /* Task View */,
 				3F38D5A024AABACE00D1CCBD /* TaskViewController.swift */,
 				3F38D5A224AABAE200D1CCBD /* NewEditTaskViewController.swift */,
 			);
 			path = Task;
+			sourceTree = "<group>";
+		};
+		3FD7215124B3F57A00F2B65D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3FD7215424B3F82B00F2B65D /* TaskCell.swift */,
+				3FD7215524B3F82B00F2B65D /* TaskCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3FD7215324B3F59E00F2B65D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		3FE4300F24ADA31600ACDDE0 /* Custom Button */ = {
@@ -296,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F38D57524AAB4B200D1CCBD /* LaunchScreen.storyboard in Resources */,
+				3FD7215724B3F82B00F2B65D /* TaskCell.xib in Resources */,
 				3F38D57224AAB4B200D1CCBD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +348,7 @@
 				3F38D5A124AABACE00D1CCBD /* TaskViewController.swift in Sources */,
 				3F38D56624AAB4AE00D1CCBD /* AppDelegate.swift in Sources */,
 				3F38D5A324AABAE200D1CCBD /* NewEditTaskViewController.swift in Sources */,
+				3FD7215624B3F82B00F2B65D /* TaskCell.swift in Sources */,
 				3FE4301224ADA3C600ACDDE0 /* Tasks.swift in Sources */,
 				3F38D59F24AABAA800D1CCBD /* ProjectHomeViewController.swift in Sources */,
 				3FE4301424ADA4F300ACDDE0 /* ColorButton.swift in Sources */,

@@ -10,6 +10,82 @@ import UIKit
 
 class NewProjectViewController: UIViewController {
     
+    let colors: [UIColor] = [UIColor(named: "softRed")!,UIColor(named: "almostPink")!,UIColor(named: "Lavender")!,UIColor(named: "SkyBlue")!,UIColor(named: "ForrestGreen")!,UIColor(named: "lightOrange")!,UIColor(named: "black")!,UIColor(named: "grey")!,UIColor(named: "lightGrey")!]
+    
+    //MARK: Buttons
+    let color1: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "circle.fill"), for: .normal)
+        button.tintColor = UIColor(named: "softRed")
+        button.tag = 0
+        return button
+    }()
+    
+    let color2: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "circle.fill"), for: .normal)
+        button.tintColor = UIColor(named: "almostPink")
+        button.tag = 1
+        return button
+    }()
+    
+    let color3: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "circle.fill"), for: .normal)
+        button.tintColor = UIColor(named: "Lavender")
+        button.tag = 2
+        return button
+    }()
+    
+    let color4: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "circle.fill"), for: .normal)
+        button.tintColor = UIColor(named: "SkyBlue")
+        button.tag = 3
+        return button
+    }()
+    
+    let color5: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "circle.fill"), for: .normal)
+        button.tintColor = UIColor(named: "ForrestGreen")
+        button.tag = 4
+        return button
+    }()
+    
+    let color6: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "circle.fill"), for: .normal)
+        button.tintColor = UIColor(named: "lightOrange")
+        button.tag = 5
+        return button
+    }()
+    
+    let color7: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "circle.fill"), for: .normal)
+        button.tintColor = UIColor(named: "black")
+        button.tag = 6
+        return button
+    }()
+    
+    let color8: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "circle.fill"), for: .normal)
+        button.tintColor = UIColor(named: "grey")
+        button.tag = 7
+        return button
+    }()
+    
+    let color9: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "circle.fill"), for: .normal)
+        button.tintColor = UIColor(named: "lightGrey")
+        button.tag = 8
+        return button
+    }()
+    
+    //MARK: Stacks
     let hStack1: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
@@ -46,8 +122,6 @@ class NewProjectViewController: UIViewController {
         return stack
     }()
     
-    let colors: [UIColor] = [UIColor(named: "softRed")!,UIColor(named: "almostPink")!,UIColor(named: "Lavender")!,UIColor(named: "SkyBlue")!,UIColor(named: "ForrestGreen")!,UIColor(named: "lightOrange")!,UIColor(named: "black")!,UIColor(named: "grey")!,UIColor(named: "lightGrey")!]
-    
     let nameInput: UITextField = {
         let text = UITextField()
         text.translatesAutoresizingMaskIntoConstraints = false
@@ -64,6 +138,7 @@ class NewProjectViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = saveButton
         
         setup()
+        buttonSetup()
     }
     
     
@@ -76,22 +151,40 @@ class NewProjectViewController: UIViewController {
             nameInput.trailingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10)
         ])
         
-        self.view.addSubview(vStack)
-        NSLayoutConstraint.activate([
-            vStack.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            vStack.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
-        ])
-        vStack.addArrangedSubview(hStack1)
-        vStack.addArrangedSubview(hStack2)
-        vStack.addArrangedSubview(hStack3)
+//        self.view.addSubview(vStack)
+//        NSLayoutConstraint.activate([
+//            vStack.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+//            vStack.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+//        ])
+//        vStack.addArrangedSubview(hStack1)
+//        vStack.addArrangedSubview(hStack2)
+//        vStack.addArrangedSubview(hStack3)
     }
     
     //MARK: Button Setup
+    func buttonSetup(){
+        hStack1.addArrangedSubview(color1)
+        hStack1.addArrangedSubview(color2)
+        hStack1.addArrangedSubview(color3)
+        
+        hStack2.addArrangedSubview(color4)
+        hStack2.addArrangedSubview(color5)
+        hStack2.addArrangedSubview(color6)
+        
+        hStack3.addArrangedSubview(color7)
+        hStack3.addArrangedSubview(color8)
+        hStack3.addArrangedSubview(color9)
+    }
     
     
     //MARK: Saving
     @objc func saveProject(){
         print("Saving...")
+    }
+    
+    @objc func selectColor(sender: UIButton!){
+        let color = colors[sender.tag]
+        print("Color is \(color)")
     }
     
 }
