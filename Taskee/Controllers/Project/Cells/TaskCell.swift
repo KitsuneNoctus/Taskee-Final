@@ -9,7 +9,11 @@
 import UIKit
 
 class TaskCell: UITableViewCell {
-
+    
+    @IBOutlet weak var colorTag: UIImageView!
+    @IBOutlet weak var projectTitleLabel: UILabel!
+    @IBOutlet weak var pendingTasksLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

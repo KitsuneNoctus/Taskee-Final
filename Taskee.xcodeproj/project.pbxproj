@@ -20,6 +20,8 @@
 		3F38D5A324AABAE200D1CCBD /* NewEditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D5A224AABAE200D1CCBD /* NewEditTaskViewController.swift */; };
 		3FD7215624B3F82B00F2B65D /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7215424B3F82B00F2B65D /* TaskCell.swift */; };
 		3FD7215724B3F82B00F2B65D /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD7215524B3F82B00F2B65D /* TaskCell.xib */; };
+		3FD7215A24B41CD300F2B65D /* TasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7215824B41CD300F2B65D /* TasksCell.swift */; };
+		3FD7215D24B41FE600F2B65D /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7215C24B41FE600F2B65D /* CheckBox.swift */; };
 		3FE4301224ADA3C600ACDDE0 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4301124ADA3C600ACDDE0 /* Tasks.swift */; };
 		3FE4301424ADA4F300ACDDE0 /* ColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4301324ADA4F300ACDDE0 /* ColorButton.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,8 @@
 		3F38D5A224AABAE200D1CCBD /* NewEditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditTaskViewController.swift; sourceTree = "<group>"; };
 		3FD7215424B3F82B00F2B65D /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		3FD7215524B3F82B00F2B65D /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
+		3FD7215824B41CD300F2B65D /* TasksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksCell.swift; sourceTree = "<group>"; };
+		3FD7215C24B41FE600F2B65D /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		3FE4301124ADA3C600ACDDE0 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		3FE4301324ADA4F300ACDDE0 /* ColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +197,8 @@
 		3FD7215324B3F59E00F2B65D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3FD7215824B41CD300F2B65D /* TasksCell.swift */,
+				3FD7215C24B41FE600F2B65D /* CheckBox.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -351,6 +357,8 @@
 				3FD7215624B3F82B00F2B65D /* TaskCell.swift in Sources */,
 				3FE4301224ADA3C600ACDDE0 /* Tasks.swift in Sources */,
 				3F38D59F24AABAA800D1CCBD /* ProjectHomeViewController.swift in Sources */,
+				3FD7215A24B41CD300F2B65D /* TasksCell.swift in Sources */,
+				3FD7215D24B41FE600F2B65D /* CheckBox.swift in Sources */,
 				3FE4301424ADA4F300ACDDE0 /* ColorButton.swift in Sources */,
 				3F38D56824AAB4AE00D1CCBD /* SceneDelegate.swift in Sources */,
 				3F38D59D24AABA8F00D1CCBD /* NewProjectViewController.swift in Sources */,
