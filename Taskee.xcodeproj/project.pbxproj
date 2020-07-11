@@ -21,6 +21,8 @@
 		3F6D023D24B9206B00E658E1 /* NewerProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D023B24B9206B00E658E1 /* NewerProjectViewController.swift */; };
 		3F6D023E24B9206B00E658E1 /* NewerProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6D023C24B9206B00E658E1 /* NewerProjectViewController.xib */; };
 		3F6D024024B9282C00E658E1 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D023F24B9282C00E658E1 /* ProjectCell.swift */; };
+		3F6D024224B94D7C00E658E1 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D024124B94D7C00E658E1 /* AddProjectViewController.swift */; };
+		3F6D024424B9591500E658E1 /* MFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D024324B9591500E658E1 /* MFTextField.swift */; };
 		3FC21D9924B6C6BB00BA0DFB /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC21D9824B6C6BB00BA0DFB /* ListController.swift */; };
 		3FD7215A24B41CD300F2B65D /* TasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7215824B41CD300F2B65D /* TasksCell.swift */; };
 		3FD7215D24B41FE600F2B65D /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7215C24B41FE600F2B65D /* CheckBox.swift */; };
@@ -66,6 +68,8 @@
 		3F6D023B24B9206B00E658E1 /* NewerProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewerProjectViewController.swift; path = Taskee/Controllers/Project/NewerProjectViewController.swift; sourceTree = SOURCE_ROOT; };
 		3F6D023C24B9206B00E658E1 /* NewerProjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NewerProjectViewController.xib; path = Taskee/Controllers/Project/NewerProjectViewController.xib; sourceTree = SOURCE_ROOT; };
 		3F6D023F24B9282C00E658E1 /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
+		3F6D024124B94D7C00E658E1 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		3F6D024324B9591500E658E1 /* MFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFTextField.swift; sourceTree = "<group>"; };
 		3FC21D9824B6C6BB00BA0DFB /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		3FD7215824B41CD300F2B65D /* TasksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksCell.swift; sourceTree = "<group>"; };
 		3FD7215C24B41FE600F2B65D /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				3F38D56E24AAB4AE00D1CCBD /* Taskee.xcdatamodeld */,
+				3F6D024324B9591500E658E1 /* MFTextField.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				3FD7215124B3F57A00F2B65D /* Cells */,
 				3FE4300F24ADA31600ACDDE0 /* Custom Button */,
 				3F38D59C24AABA8F00D1CCBD /* NewProjectViewController.swift */,
+				3F6D024124B94D7C00E658E1 /* AddProjectViewController.swift */,
 				3F38D59E24AABAA800D1CCBD /* ProjectHomeViewController.swift */,
 			);
 			path = Project;
@@ -367,10 +373,12 @@
 				3F38D57024AAB4AE00D1CCBD /* Taskee.xcdatamodeld in Sources */,
 				3F38D5A124AABACE00D1CCBD /* TaskViewController.swift in Sources */,
 				3F38D56624AAB4AE00D1CCBD /* AppDelegate.swift in Sources */,
+				3F6D024224B94D7C00E658E1 /* AddProjectViewController.swift in Sources */,
 				3F38D5A324AABAE200D1CCBD /* NewEditTaskViewController.swift in Sources */,
 				3FC21D9924B6C6BB00BA0DFB /* ListController.swift in Sources */,
 				3FE4301224ADA3C600ACDDE0 /* Tasks.swift in Sources */,
 				3F38D59F24AABAA800D1CCBD /* ProjectHomeViewController.swift in Sources */,
+				3F6D024424B9591500E658E1 /* MFTextField.swift in Sources */,
 				3FD7215A24B41CD300F2B65D /* TasksCell.swift in Sources */,
 				3FD7215D24B41FE600F2B65D /* CheckBox.swift in Sources */,
 				3FE4301424ADA4F300ACDDE0 /* ColorButton.swift in Sources */,

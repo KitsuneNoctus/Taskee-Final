@@ -50,7 +50,7 @@ class ProjectHomeViewController: UIViewController {
     
     @objc func createProject(){
         print("Adding project")
-        let addVC = NewerProjectViewController()
+        let addVC = AddProjectViewController()
         self.navigationController?.pushViewController(addVC, animated: true)
     }
     
