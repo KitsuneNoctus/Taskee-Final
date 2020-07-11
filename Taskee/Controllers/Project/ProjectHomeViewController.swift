@@ -10,6 +10,8 @@ import UIKit
 
 class ProjectHomeViewController: UIViewController {
     
+    lazy var coreDataStack = CoreDataStack()
+    
     let tableView: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
@@ -18,7 +20,25 @@ class ProjectHomeViewController: UIViewController {
         table.separatorStyle = UITableViewCell.SeparatorStyle.none
         return table
     }()
-
+    
+    //MARK: Fetch Controller
+    lazy var fetchedResultsController: NSFetchedResultsController<Project> = {
+        
+        let fetchRequest: NSFetchRequest<Project> = Project.fetchRequest()
+        fetchRequest.sortDescriptors = []
+        
+        let fetchedResultsController = NSFetchedResultsController(
+            fetchRequest: fetchRequest,
+            managedObjectContext: coreDataStack.managedContext,
+            sectionNameKeyPath: nil,
+            cacheName: nil)
+        
+        fetchRequest.delegate = self
+        
+        return fetchedResultsController
+    }()
+    
+    //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Projects"
@@ -56,9 +76,31 @@ class ProjectHomeViewController: UIViewController {
     
 }
 
+//MARK: Extension - Configure Cell
+extension ProjectHomeViewController{
+    func configure(cell: UITableViewCell, for indexPath: IndexPath){
+        guard let cell = cell as? ProjectCell else { return }
+        let project = fetchedResultsController.object(at: indexPath)
+        
+//        cell.projectTitle.text = project
+    }
+}
+
+//MARK: Table Delegate & Data Source
 extension ProjectHomeViewController: UITableViewDelegate, UITableViewDataSource{
+    func numberOfSections(in tableView: UITableView) -> Int {
+      //sections
+      return fetchedResultsController.sections?.count ?? 0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+      //rows
+      guard let sectionInfo =
+        fetchedResultsController.sections?[section] else {
+          return 0
+      }
+      
+      return sectionInfo.numberOfObjects
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -78,4 +120,35 @@ extension ProjectHomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     
+}
+
+//MARK: Fetched Results Controller
+extension ProjectHomeViewController: NSFetchedResultsControllerDelegate{
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+      tableView.beginUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
+                    didChange anObject: Any,
+                    at indexPath: IndexPath?,
+                    for type: NSFetchedResultsChangeType,
+                    newIndexPath: IndexPath?) {
+      
+      switch type {
+      case .insert:
+        tableView.insertRows(at: [newIndexPath!], with: .automatic)
+      case .delete:
+        tableView.deleteRows(at: [indexPath!], with: .automatic)
+      case .update:
+        let cell = tableView.cellForRow(at: indexPath!) as! TeamCell
+        configure(cell: cell, for: indexPath!)
+      case .move:
+        tableView.deleteRows(at: [indexPath!], with: .automatic)
+        tableView.insertRows(at: [newIndexPath!], with: .automatic)
+      }
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+      tableView.endUpdates()
+    }
 }
