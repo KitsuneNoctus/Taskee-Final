@@ -126,29 +126,33 @@ class NewProjectViewController: UIViewController {
         let text = UITextField()
         text.translatesAutoresizingMaskIntoConstraints = false
         text.text = "Name Your Project..."
+        text.textColor = .black
+//        text.backgroundColor = .blue
         return text
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+        buttonSetup()
         self.title = "New Project or Edit"
-        self.view.backgroundColor = .white
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.view.backgroundColor = .gray
         
         let saveButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(saveProject))
         self.navigationItem.rightBarButtonItem = saveButton
-        
-        setup()
-        buttonSetup()
     }
     
     
     //MARK: Setup
     func setup(){
+        print("Setup")
         self.view.addSubview(nameInput)
         NSLayoutConstraint.activate([
             nameInput.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
             nameInput.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10),
-            nameInput.trailingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10)
+            nameInput.trailingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10),
+            nameInput.heightAnchor.constraint(equalToConstant: 50)
         ])
         
 //        self.view.addSubview(vStack)
@@ -163,17 +167,18 @@ class NewProjectViewController: UIViewController {
     
     //MARK: Button Setup
     func buttonSetup(){
-        hStack1.addArrangedSubview(color1)
-        hStack1.addArrangedSubview(color2)
-        hStack1.addArrangedSubview(color3)
-        
-        hStack2.addArrangedSubview(color4)
-        hStack2.addArrangedSubview(color5)
-        hStack2.addArrangedSubview(color6)
-        
-        hStack3.addArrangedSubview(color7)
-        hStack3.addArrangedSubview(color8)
-        hStack3.addArrangedSubview(color9)
+        print("Okay")
+//        hStack1.addArrangedSubview(color1)
+//        hStack1.addArrangedSubview(color2)
+//        hStack1.addArrangedSubview(color3)
+//
+//        hStack2.addArrangedSubview(color4)
+//        hStack2.addArrangedSubview(color5)
+//        hStack2.addArrangedSubview(color6)
+//
+//        hStack3.addArrangedSubview(color7)
+//        hStack3.addArrangedSubview(color8)
+//        hStack3.addArrangedSubview(color9)
     }
     
     

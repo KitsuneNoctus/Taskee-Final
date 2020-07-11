@@ -18,8 +18,10 @@
 		3F38D59F24AABAA800D1CCBD /* ProjectHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D59E24AABAA800D1CCBD /* ProjectHomeViewController.swift */; };
 		3F38D5A124AABACE00D1CCBD /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D5A024AABACE00D1CCBD /* TaskViewController.swift */; };
 		3F38D5A324AABAE200D1CCBD /* NewEditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38D5A224AABAE200D1CCBD /* NewEditTaskViewController.swift */; };
-		3FD7215624B3F82B00F2B65D /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7215424B3F82B00F2B65D /* TaskCell.swift */; };
-		3FD7215724B3F82B00F2B65D /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD7215524B3F82B00F2B65D /* TaskCell.xib */; };
+		3F6D023D24B9206B00E658E1 /* NewerProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D023B24B9206B00E658E1 /* NewerProjectViewController.swift */; };
+		3F6D023E24B9206B00E658E1 /* NewerProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6D023C24B9206B00E658E1 /* NewerProjectViewController.xib */; };
+		3F6D024024B9282C00E658E1 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D023F24B9282C00E658E1 /* ProjectCell.swift */; };
+		3FC21D9924B6C6BB00BA0DFB /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC21D9824B6C6BB00BA0DFB /* ListController.swift */; };
 		3FD7215A24B41CD300F2B65D /* TasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7215824B41CD300F2B65D /* TasksCell.swift */; };
 		3FD7215D24B41FE600F2B65D /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7215C24B41FE600F2B65D /* CheckBox.swift */; };
 		3FE4301224ADA3C600ACDDE0 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4301124ADA3C600ACDDE0 /* Tasks.swift */; };
@@ -61,8 +63,10 @@
 		3F38D59E24AABAA800D1CCBD /* ProjectHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHomeViewController.swift; sourceTree = "<group>"; };
 		3F38D5A024AABACE00D1CCBD /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		3F38D5A224AABAE200D1CCBD /* NewEditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditTaskViewController.swift; sourceTree = "<group>"; };
-		3FD7215424B3F82B00F2B65D /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
-		3FD7215524B3F82B00F2B65D /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
+		3F6D023B24B9206B00E658E1 /* NewerProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewerProjectViewController.swift; path = Taskee/Controllers/Project/NewerProjectViewController.swift; sourceTree = SOURCE_ROOT; };
+		3F6D023C24B9206B00E658E1 /* NewerProjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NewerProjectViewController.xib; path = Taskee/Controllers/Project/NewerProjectViewController.xib; sourceTree = SOURCE_ROOT; };
+		3F6D023F24B9282C00E658E1 /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
+		3FC21D9824B6C6BB00BA0DFB /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		3FD7215824B41CD300F2B65D /* TasksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksCell.swift; sourceTree = "<group>"; };
 		3FD7215C24B41FE600F2B65D /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		3FE4301124ADA3C600ACDDE0 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 		3F38D59924AABA3200D1CCBD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3FC21D9724B6C61500BA0DFB /* Helper */,
 				3F38D59B24AABA7000D1CCBD /* Task */,
 				3F38D59A24AABA6B00D1CCBD /* Project */,
 			);
@@ -185,11 +190,18 @@
 			path = Task;
 			sourceTree = "<group>";
 		};
+		3FC21D9724B6C61500BA0DFB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3FC21D9824B6C6BB00BA0DFB /* ListController.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		3FD7215124B3F57A00F2B65D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3FD7215424B3F82B00F2B65D /* TaskCell.swift */,
-				3FD7215524B3F82B00F2B65D /* TaskCell.xib */,
+				3F6D023F24B9282C00E658E1 /* ProjectCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -207,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				3FE4301324ADA4F300ACDDE0 /* ColorButton.swift */,
+				3F6D023B24B9206B00E658E1 /* NewerProjectViewController.swift */,
+				3F6D023C24B9206B00E658E1 /* NewerProjectViewController.xib */,
 			);
 			path = "Custom Button";
 			sourceTree = "<group>";
@@ -324,7 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F38D57524AAB4B200D1CCBD /* LaunchScreen.storyboard in Resources */,
-				3FD7215724B3F82B00F2B65D /* TaskCell.xib in Resources */,
+				3F6D023E24B9206B00E658E1 /* NewerProjectViewController.xib in Resources */,
 				3F38D57224AAB4B200D1CCBD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,13 +368,15 @@
 				3F38D5A124AABACE00D1CCBD /* TaskViewController.swift in Sources */,
 				3F38D56624AAB4AE00D1CCBD /* AppDelegate.swift in Sources */,
 				3F38D5A324AABAE200D1CCBD /* NewEditTaskViewController.swift in Sources */,
-				3FD7215624B3F82B00F2B65D /* TaskCell.swift in Sources */,
+				3FC21D9924B6C6BB00BA0DFB /* ListController.swift in Sources */,
 				3FE4301224ADA3C600ACDDE0 /* Tasks.swift in Sources */,
 				3F38D59F24AABAA800D1CCBD /* ProjectHomeViewController.swift in Sources */,
 				3FD7215A24B41CD300F2B65D /* TasksCell.swift in Sources */,
 				3FD7215D24B41FE600F2B65D /* CheckBox.swift in Sources */,
 				3FE4301424ADA4F300ACDDE0 /* ColorButton.swift in Sources */,
 				3F38D56824AAB4AE00D1CCBD /* SceneDelegate.swift in Sources */,
+				3F6D023D24B9206B00E658E1 /* NewerProjectViewController.swift in Sources */,
+				3F6D024024B9282C00E658E1 /* ProjectCell.swift in Sources */,
 				3F38D59D24AABA8F00D1CCBD /* NewProjectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
