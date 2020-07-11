@@ -82,6 +82,8 @@ extension ProjectHomeViewController{
         guard let cell = cell as? ProjectCell else { return }
         let project = fetchedResultsController.object(at: indexPath)
         
+        call.projectTitle.text = project.title
+        
 //        cell.projectTitle.text = project
     }
 }
@@ -106,9 +108,10 @@ extension ProjectHomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProjectCell.identifier, for: indexPath) as! ProjectCell
 //        let news = newsArts[indexPath.row]
-        cell.colorTag.backgroundColor = .red
-        cell.projectTitle.text = "Project Sneel"
-        cell.taskLabel.text = "5 Tasks"
+//        cell.colorTag.backgroundColor = .red
+//        cell.projectTitle.text = "Project Sneel"
+//        cell.taskLabel.text = "5 Tasks"
+        configure(cell: cell, for indexPath: indexPath)
         return cell
     }
     

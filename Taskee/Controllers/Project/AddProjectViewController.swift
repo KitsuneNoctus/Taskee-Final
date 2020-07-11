@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class AddProjectViewController: UIViewController {
     
     let colors: [UIColor] = [UIColor(named: "softRed")!,UIColor(named: "almostPink")!,UIColor(named: "Lavender")!,UIColor(named: "SkyBlue")!,UIColor(named: "ForrestGreen")!,UIColor(named: "lightOrange")!,UIColor(named: "black")!,UIColor(named: "grey")!,UIColor(named: "lightGrey")!]
+    
+    var coreDataStack: CoreDataStack?
     
 //    let titleField: UITextField = {
 //        let text = UITextField()
