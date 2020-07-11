@@ -9,7 +9,6 @@
 import UIKit
 
 class TaskViewController: UIViewController {
-    
     var projectTitle: String = "Project Name"
     
     let todoSelector: UISegmentedControl = {
@@ -79,6 +78,9 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TasksCell.identifier, for: indexPath) as! TasksCell
+//        cell.textLabel?.text = "Hello"
+        print(cell)
+        cell.taskLabel.text = "Hello"
 //        if todoSelector.selectedSegmentIndex == 0{
 //            
 //        }else{

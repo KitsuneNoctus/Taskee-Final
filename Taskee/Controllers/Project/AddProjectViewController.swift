@@ -94,6 +94,7 @@ extension AddProjectViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(colors[indexPath.row])
         print(indexPath)
     }
     
