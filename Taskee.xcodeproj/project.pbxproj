@@ -22,6 +22,7 @@
 		3F6D024424B9591500E658E1 /* MFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D024324B9591500E658E1 /* MFTextField.swift */; };
 		3FD7215A24B41CD300F2B65D /* TasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7215824B41CD300F2B65D /* TasksCell.swift */; };
 		3FD7215D24B41FE600F2B65D /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7215C24B41FE600F2B65D /* CheckBox.swift */; };
+		3FE6675A24B970A400AB95D2 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6675924B970A400AB95D2 /* TaskModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		3F6D024324B9591500E658E1 /* MFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFTextField.swift; sourceTree = "<group>"; };
 		3FD7215824B41CD300F2B65D /* TasksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksCell.swift; sourceTree = "<group>"; };
 		3FD7215C24B41FE600F2B65D /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		3FE6675924B970A400AB95D2 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			children = (
 				3F38D56E24AAB4AE00D1CCBD /* Taskee.xcdatamodeld */,
 				3F6D024324B9591500E658E1 /* MFTextField.swift */,
+				3FE6675924B970A400AB95D2 /* TaskModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				3F6D024224B94D7C00E658E1 /* AddProjectViewController.swift in Sources */,
 				3F38D5A324AABAE200D1CCBD /* NewEditTaskViewController.swift in Sources */,
 				3F38D59F24AABAA800D1CCBD /* ProjectHomeViewController.swift in Sources */,
+				3FE6675A24B970A400AB95D2 /* TaskModel.swift in Sources */,
 				3F6D024424B9591500E658E1 /* MFTextField.swift in Sources */,
 				3FD7215A24B41CD300F2B65D /* TasksCell.swift in Sources */,
 				3FD7215D24B41FE600F2B65D /* CheckBox.swift in Sources */,

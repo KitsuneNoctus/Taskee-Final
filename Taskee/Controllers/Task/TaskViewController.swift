@@ -11,6 +11,13 @@ import UIKit
 class TaskViewController: UIViewController {
     var projectTitle: String = "Project Name"
     
+    let dummyData: [TaskItem] = [
+        TaskItem(name: "Task 1", checked: false),
+        TaskItem(name: "Task 2", checked: false),
+        TaskItem(name: "Task 3", checked: false),
+        TaskItem(name: "Task 4", checked: true)
+    ]
+    
     let todoSelector: UISegmentedControl = {
         let control = UISegmentedControl()
         control.translatesAutoresizingMaskIntoConstraints = false
@@ -23,10 +30,11 @@ class TaskViewController: UIViewController {
         table.translatesAutoresizingMaskIntoConstraints = false
         table.backgroundColor = .clear
         table.register(TasksCell.self, forCellReuseIdentifier: TasksCell.identifier)
-//        table.separatorStyle = UITableViewCell.SeparatorStyle.none
+        table.separatorStyle = UITableViewCell.SeparatorStyle.none
         return table
     }()
-
+    
+    //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = projectTitle
@@ -55,6 +63,7 @@ class TaskViewController: UIViewController {
         todoSelector.insertSegment(withTitle: "TODO", at: 0, animated: true)
         todoSelector.insertSegment(withTitle: "DONE", at: 1, animated: true)
         todoSelector.selectedSegmentIndex = 0
+        todoSelector.addTarget(self, action: #selector(changeUp), for: .allTouchEvents)
         self.view.addSubview(todoSelector)
         NSLayoutConstraint.activate([
             todoSelector.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -68,24 +77,37 @@ class TaskViewController: UIViewController {
     @objc func addTask(){
         navigationController?.pushViewController(NewEditTaskViewController(), animated: true)
     }
+    
+    @objc func changeUp(){
+        taskTable.reloadData()
+    }
 
 }
 
 extension TaskViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+//        var count = 0
+//        if todoSelector.selectedSegmentIndex == 0{
+//            for t in dummyData{
+//                if t.checked == false{
+//                    count += 1
+//                }
+//            }
+//        }else{
+//            for t in dummyData{
+//               if t.checked == true{
+//                    count += 1
+//                }
+//            }
+//        }
+//        return count
+        return dummyData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TasksCell.identifier, for: indexPath) as! TasksCell
-//        cell.textLabel?.text = "Hello"
-        print(cell)
-        cell.taskLabel.text = "Hello"
-//        if todoSelector.selectedSegmentIndex == 0{
-//            
-//        }else{
-//            
-//        }
+        cell.taskLabel.text = dummyData[indexPath.row].name
+        cell.check.isChecked = dummyData[indexPath.row].checked
         return cell
     }
     
